@@ -1,0 +1,91 @@
+{
+    "events": {
+        "login": {
+            "server": "The gateway the player logged into latency - The time, in milliseconds, it took to log in Emitted when the player logs into the game."
+        } ,
+        "instanceServer": {
+            "address": "Instance server the player connected to Emitted when the player changes the instance server. This can be useful for determining whether a player enters an area instance the player previously entered, or a newly created one."
+        },
+        "area": {
+            "name": "The name of the area that has been entered",
+            "type": "The type of the area",
+            "info": "An array of objects containing additional information about the area and their variants, if data is available. The emitted object has a different format based on the type. Emitted when the player enters an area. See AREA.md for more information about this event."
+        },
+        "areaJoin": {
+            "player": {
+                "name": "Name of the player who joined the area Emitted when another player enters the area the player is in."
+            }
+        },
+        "areaLeave": {
+            "player": {
+                "name": "Name of the player who joined the area Emitted when another player leaves the area the player is in."
+            }
+        },
+        "joinChat": {
+            "chat": "Chat which the player joined",
+            "channel": "Channel the player joined",
+            "language": "Language of the channel Emitted when the player joins a chat channel."
+        },
+        "message": {
+            "chat": ["global", "trade", "guild", "party", "local"],
+            "player": "name",
+            "guild": "Guild tag of the player who sent the message, if present",
+            "name": "Name of the player who sent the message",
+            "message": "Message the player sent Emitted when a message appears in any of the active chat channels."
+        },
+        "whisper": {
+            "direction": ["To", "From"],
+            "player": "name",
+            "guild": "Guild tag of the player who sent the whisper, if present",
+            "name": "Name of the player who sent the whisper",
+            "message": "Message the player sent Emitted when a whisper is received or sent."
+        },
+        "death": {
+            "name": "Name of the player that died Emitted when the player dies."
+        },
+        "level": {
+            "name": "Name of the player",
+            "characterClass": "Character class of the player",
+            "level": "Level of the player after level up Emitted when the player levels up."
+        },
+        "trade": {
+            "accepted": "true if the player accepted the trade Emitted when the player finishes a trade."
+        },
+        "npcEncounter": {
+            "name": "Name of the NPC",
+            "message": "Dialogue of the NPC"
+        },
+        "masterEncounter": {
+            "name": "Name of the Master",
+            "message": "Dialogue of the Master"
+        },
+        "afk": {
+            "status": "true if the player is AFK",
+            "autoreply": "The auto reply set by the player"
+        },
+        "dnd": {
+            "status": "true if the player enabled DND mode",
+            "autoreply": "The auto reply set by the player"
+        },
+        "deaths": {
+            "deaths": "Times the player died"
+        },
+        "remaining": {
+            "monsters": "The amount of remaining monsters in an area"
+        },
+        "age": {
+            "days": "Days since the character has been created",
+            "hours": "Hours since the character has been created",
+            "minutes": "Minutes since the character has been created",
+            "seconds": "Seconds since the character has been created"
+        },
+        "played": {
+            "days": "Days spent playing the character",
+            "hours": "Hours spent playing the character",
+            "minutes": "Minutes spent playing the character",
+            "seconds": "Seconds spent playing the character"
+        },
+        "start": "Emitted when the script resumes monitoring the log file. This event emits no additional data.",
+        "pause": "Emitted when the script pauses monitoring the log file. This event emits no additional data."
+    }
+}

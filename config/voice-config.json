@@ -1,0 +1,5 @@
+{
+    "speed": 1.5,
+    "legal_voices": ["Microsoft David Desktop", "Microsoft Zira Desktop"],
+    "selected_voice": "Microsoft Zira Desktop"
+}
